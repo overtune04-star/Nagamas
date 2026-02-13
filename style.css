@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff7e6;
+  margin: 0;
+  padding: 10px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.info {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #023047;
+}
+
+.best {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #fb8500;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.game-board {
+  display: grid;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffb703;
+  height: 80px;
+  font-size: 32px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card.open {
+  background: white;
+  cursor: default;
+}
+
+.card.block {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+/* 📱 MODE HP PORTRAIT */
+@media (max-width: 600px) and (orientation: portrait) {
+  .card {
+    height: 90px;
+    font-size: 36px;
+  }
+
+  button {
+    width: 90%;
+    max-width: 300px;
+  }
+}

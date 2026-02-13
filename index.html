@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Puzzle Emoji Anak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Optional: arahkan portrait -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="orientation" content="portrait">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 id="levelTitle">Level</h2>
+
+<div class="info">
+  ⏱️ <span id="timer">0</span> detik |
+  ⭐ <span id="stars">⭐⭐⭐</span>
+</div>
+
+<div class="best" id="bestScore"></div>
+
+<button onclick="restartLevel()">🔁 Ulang Level</button>
+
+<div class="game-board" id="gameBoard"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
