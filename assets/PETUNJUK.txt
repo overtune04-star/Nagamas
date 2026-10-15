@@ -1,0 +1,11 @@
+Simpan foto produk di folder ini. Nama file yang dikenali katalog:
+beat.jpg
+scoopy.jpg
+vario-125.jpg
+vario-160.jpg
+pcx-160.jpg
+adv-160.jpg
+cbr150r.jpg
+stylo.jpg
+
+Sebaiknya foto berbentuk JPG/PNG/WebP, tampak jelas, dan diambil dengan rasio lanskap atau persegi. Pastikan nama berkas pada folder ini sama persis dengan nama berkas di app.js.
