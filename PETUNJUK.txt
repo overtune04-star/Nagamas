@@ -6,7 +6,7 @@ Menjalankan situs
    Gunakan format internasional tanpa tanda + atau spasi. Contoh format: 6281234567890.
 3. Ubah nama, tipe, dan deskripsi produk di daftar products pada app.js.
 4. Untuk harga, ubah teks "Tanya penjual" pada app.js setelah daftar harga tersedia.
-5. Ilustrasi pada katalog adalah gambar vektor contoh, bukan foto resmi produk. Ganti bikeIllustration() dengan foto milik penjual sebelum dipublikasikan.
+5. Foto produk dapat diletakkan di folder assets yang sejajar dengan index.html. Gunakan nama file yang sudah disiapkan di assets/PETUNJUK.txt. Ilustrasi vektor akan tampil sebagai cadangan jika foto belum ada.
 
 Publikasi gratis
 Unggah folder ini ke layanan hosting statis gratis seperti GitHub Pages atau Netlify. Setelah situs tayang, alamat bawaan layanan gratis dapat digunakan; domain sendiri biasanya dibeli terpisah.

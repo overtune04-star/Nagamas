@@ -1,6 +1,6 @@
 // KONFIGURASI PENJUAL: ganti dengan nomor WhatsApp dalam format internasional,
 // hanya angka. Contoh nomor Indonesia: 6281234567890 (tanpa tanda + atau spasi).
-const sellerWhatsApp = "085740960426";
+const sellerWhatsApp = "6285740960426";
 
 const products = [
   { name: "BeAT", type: "Matic", desc: "Ringkas untuk aktivitas harian", tone: "#dddcd5", tag: "FAVORIT", image: "assets/beat.jpg" },
