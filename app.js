@@ -10,7 +10,7 @@ const products = [
   { name: "PCX 160", type: "Matic", desc: "Kenyamanan untuk jarak lebih jauh", tone: "#d8e0dc", tag: "PREMIUM", image: "assets/pcx-160.jpg" },
   { name: "ADV 160", type: "Matic", desc: "Siap menemani perjalanan berbeda", tone: "#d8d9d4", tag: "ADVENTURE", image: "assets/adv-160.jpg" },
   { name: "CBR150R", type: "Sport", desc: "Karakter sport yang berani", tone: "#e5d8d7", tag: "SPORT", image: "assets/cbr150r.jpg" },
-  { name: "Supra X 125 FI", type: "Cub", desc: "Andalan untuk keseharian", tone: "#e4dfd3", tag: "ANDALAN", image: "assets/stylo.jpg" }
+  { name: "Stylo 160", type: "Cub", desc: "Andalan untuk keseharian", tone: "#e4dfd3", tag: "ANDALAN", image: "assets/stylo.jpg" }
 ];
 
 const grid = document.querySelector("#product-grid");
