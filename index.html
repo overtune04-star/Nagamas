@@ -1,31 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Puzzle Emoji Anak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Optional: arahkan portrait -->
-  <meta name="screen-orientation" content="portrait">
-  <meta name="orientation" content="portrait">
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c8102e">
+  <meta name="description" content="Jelajahi pilihan motor Honda dan tanyakan harga serta ketersediaan kepada penjual.">
+  <title>Katalog Motor Honda | Temukan Motor Pilihanmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="Katalog Motor Honda, beranda">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span><strong>Roda Dua</strong><small>KATALOG MOTOR</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#katalog">Katalog</a>
+      <a href="#tentang">Tentang</a>
+    </nav>
+    <a class="button button-dark header-cta" href="#hubungi">Hubungi penjual <span aria-hidden="true">↗</span></a>
+  </header>
 
-<h2 id="levelTitle">Level</h2>
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> KATALOG MOTOR HONDA</div>
+        <h1>Temukan motor<br>yang <em>pas untukmu.</em></h1>
+        <p>Jelajahi pilihan motor untuk menemani setiap perjalanan. Tanya penjual untuk informasi harga, stok, dan promo terbaru.</p>
+        <a class="button button-red" href="#katalog">Lihat katalog <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-icon">✓</span> Pilihan lengkap, konsultasi mudah</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi motor skuter">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-label"><span>RIDE YOUR WAY</span><strong>01 / 08</strong></div>
+        <svg class="hero-bike" viewBox="0 0 680 390" role="img" aria-label="Ilustrasi skuter merah">
+          <ellipse cx="352" cy="336" rx="260" ry="20" fill="#d6d6d6" opacity=".52"/>
+          <circle cx="190" cy="290" r="65" fill="#191919"/><circle cx="190" cy="290" r="39" fill="#efefeb"/><circle cx="190" cy="290" r="12" fill="#bbb"/>
+          <circle cx="500" cy="290" r="65" fill="#191919"/><circle cx="500" cy="290" r="39" fill="#efefeb"/><circle cx="500" cy="290" r="12" fill="#bbb"/>
+          <path d="M188 286l65-111q9-16 26-16h113q18 0 29 15l71 98-17 17-82-51H293l-61 66z" fill="#c8102e"/>
+          <path d="M268 172l38-58q9-14 27-14h84q13 0 20 13l22 48-30 18H284z" fill="#292929"/>
+          <path d="M319 109h91l20 45H286z" fill="#3b3b3b"/>
+          <path d="M472 209l41-30 20 7-13 26 32 70h-31l-49-54z" fill="#333"/>
+          <path d="M186 283l28-6 18 24-14 21h-41z" fill="#c8102e"/>
+          <path d="M245 169l-22-16-10 5 13 27zM515 188l33-10 9 7-12 19-28 4z" fill="#e9e7df"/>
+          <path d="M303 219h122" stroke="#f2f0eb" stroke-width="4" opacity=".72"/>
+          <path d="M317 294l21-34h76l38 34" fill="none" stroke="#333" stroke-width="13" stroke-linecap="round"/>
+        </svg>
+        <div class="art-caption"><span>DIRANCANG UNTUK HARI INI</span><span class="caption-line"></span></div>
+      </div>
+      <div class="hero-index">01 <span>/</span> MOTOR PILIHAN</div>
+    </section>
 
-<div class="info">
-  ⏱️ <span id="timer">0</span> detik |
-  ⭐ <span id="stars">⭐⭐⭐</span>
-</div>
+    <section class="catalog section-wrap" id="katalog">
+      <div class="section-heading">
+        <div><div class="eyebrow muted">PILIHAN UNTUKMU</div><h2>Jelajahi katalog</h2></div>
+        <p>Temukan model yang sesuai dengan kebutuhan dan gaya berkendaramu.</p>
+      </div>
+      <div class="catalog-controls">
+        <div class="filter-list" role="group" aria-label="Filter tipe motor">
+          <button class="filter active" data-filter="Semua">Semua <span class="filter-count">08</span></button>
+          <button class="filter" data-filter="Matic">Matic</button>
+          <button class="filter" data-filter="Sport">Sport</button>
+          <button class="filter" data-filter="Cub">Cub</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Cari motor..." aria-label="Cari motor"><kbd>⌘ K</kbd></label>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><strong>Motor tidak ditemukan</strong><p>Coba kata kunci atau kategori lain.</p></div>
+      <div class="catalog-footnote"><span class="info-icon">i</span> Harga, warna, dan ketersediaan dapat berubah. Hubungi penjual untuk info terbaru.</div>
+    </section>
 
-<div class="best" id="bestScore"></div>
+    <section class="contact-band" id="hubungi">
+      <div class="contact-inner">
+        <div class="contact-icon">✳</div>
+        <div><div class="eyebrow light">BUTUH BANTUAN MEMILIH?</div><h2>Yuk, ngobrol dulu.</h2><p>Tanyakan harga, ketersediaan, atau rekomendasi motor yang cocok untukmu.</p></div>
+        <a class="button button-white whatsapp-link" href="#hubungi">Tanya via WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
 
-<button onclick="restartLevel()">🔁 Ulang Level</button>
+    <section class="about section-wrap" id="tentang">
+      <div class="about-number">01<span> / INFO</span></div>
+      <div><div class="eyebrow muted">RODA DUA MOTOR</div><h2>Perjalananmu dimulai<br>dari pilihan yang tepat.</h2></div>
+      <p>Kami membantu kamu mengenal pilihan motor Honda. Hubungi penjual untuk informasi unit, simulasi pembelian, dan layanan yang tersedia.</p>
+    </section>
+  </main>
 
-<div class="game-board" id="gameBoard"></div>
-
-<script src="script.js"></script>
+  <footer class="site-footer"><a class="brand footer-brand" href="#beranda"><span class="brand-mark">H</span><span><strong>Roda Dua</strong><small>KATALOG MOTOR</small></span></a><span>© <span id="year"></span> Roda Dua Motor</span><span class="footer-disclaimer">Honda adalah merek dagang pemiliknya masing-masing.</span></footer>
+  <script src="app.js"></script>
 </body>
 </html>
