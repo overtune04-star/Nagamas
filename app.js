@@ -1,16 +1,16 @@
 // KONFIGURASI PENJUAL: ganti dengan nomor WhatsApp dalam format internasional,
 // hanya angka. Contoh nomor Indonesia: 6281234567890 (tanpa tanda + atau spasi).
-const sellerWhatsApp = "";
+const sellerWhatsApp = "085740960426";
 
 const products = [
-  { name: "BeAT", type: "Matic", desc: "Ringkas untuk aktivitas harian", tone: "#dddcd5", tag: "FAVORIT" },
-  { name: "Scoopy", type: "Matic", desc: "Gaya ikonik, teman beraktivitas", tone: "#e8d9d1", tag: "STYLISH" },
-  { name: "Vario 125", type: "Matic", desc: "Nyaman untuk perjalanan harian", tone: "#d7dce0", tag: "PRAKTIS" },
-  { name: "Vario 160", type: "Matic", desc: "Tampil sporty di setiap perjalanan", tone: "#d9d7df", tag: "SPORTY" },
-  { name: "PCX 160", type: "Matic", desc: "Kenyamanan untuk jarak lebih jauh", tone: "#d8e0dc", tag: "PREMIUM" },
-  { name: "ADV 160", type: "Matic", desc: "Siap menemani perjalanan berbeda", tone: "#d8d9d4", tag: "ADVENTURE" },
-  { name: "CBR150R", type: "Sport", desc: "Karakter sport yang berani", tone: "#e5d8d7", tag: "SPORT" },
-  { name: "Supra X 125 FI", type: "Cub", desc: "Andalan untuk keseharian", tone: "#e4dfd3", tag: "ANDALAN" }
+  { name: "BeAT", type: "Matic", desc: "Ringkas untuk aktivitas harian", tone: "#dddcd5", tag: "FAVORIT", image: "assets/beat.jpg" },
+  { name: "Scoopy", type: "Matic", desc: "Gaya ikonik, teman beraktivitas", tone: "#e8d9d1", tag: "STYLISH", image: "assets/scoopy.jpg" },
+  { name: "Vario 125", type: "Matic", desc: "Nyaman untuk perjalanan harian", tone: "#d7dce0", tag: "PRAKTIS", image: "assets/vario-125.jpg" },
+  { name: "Vario 160", type: "Matic", desc: "Tampil sporty di setiap perjalanan", tone: "#d9d7df", tag: "SPORTY", image: "assets/vario-160.jpg" },
+  { name: "PCX 160", type: "Matic", desc: "Kenyamanan untuk jarak lebih jauh", tone: "#d8e0dc", tag: "PREMIUM", image: "assets/pcx-160.jpg" },
+  { name: "ADV 160", type: "Matic", desc: "Siap menemani perjalanan berbeda", tone: "#d8d9d4", tag: "ADVENTURE", image: "assets/adv-160.jpg" },
+  { name: "CBR150R", type: "Sport", desc: "Karakter sport yang berani", tone: "#e5d8d7", tag: "SPORT", image: "assets/cbr150r.jpg" },
+  { name: "Supra X 125 FI", type: "Cub", desc: "Andalan untuk keseharian", tone: "#e4dfd3", tag: "ANDALAN", image: "assets/stylo.jpg" }
 ];
 
 const grid = document.querySelector("#product-grid");
@@ -49,6 +49,7 @@ function render() {
     <article class="product-card" style="animation-delay:${index * 35}ms">
       <div class="product-visual" style="--wash:${item.tone}">
         <span class="product-tag">${item.tag}</span><span class="product-no">0${products.indexOf(item) + 1}</span>
+        <img class="product-photo" src="${item.image}" alt="Honda ${item.name}" onerror="this.hidden=true">
         ${bikeIllustration(item.name === "BeAT" || item.name === "CBR150R" ? "#c8102e" : "#363636")}
       </div>
       <div class="product-info">
